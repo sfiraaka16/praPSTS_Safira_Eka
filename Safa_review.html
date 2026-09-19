@@ -4,57 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudent task</title>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <form>
-        <h3>Student Event Registration</h3>
-        <label>Full Name</label><br>
-        <input type="text"><br>
+<body class="bg-pink-50 text-gray-700">
 
-        <label>Class</label><br>
-        <select>
-            <option>X-8</option>
-            <option>X-9</option>
-            <option>X-10</option>
-        </select><br>
+     <!-- HEADER -->
+    <header class="bg-pink-400 text-white">
+    <div class="container mx-auto px-6 py-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold">
+            School Event Registration
+        </h1>
+        <p class="mt-3 text-pink-100 leading-relaxed">
+            Register for exciting school activities and events in 2026.
+        </p>
+        </div>
+    </header>
 
-        <label>Email</label><br>
-        <input type="email"><br>
+    <!--MAIN CONTENT-->
+    <main class="container mx-auto px-4 py-8">
 
-        <label>Phone Number</label><br>
-        <input type="number"><br>
+        <!-- REGISTRATION FORM -->
+    <section class="max-w-3xl mx-auto bg-white p-6 md:p-8 rounded-2xl border border-pink-100 shadow">
 
-        <label>Choose Activity</label><br>
-        <select>
-            <option>Competition</option>
-            <option>Workshop</option>
-            <option>Seminar</option>
-            <option>Social Activity</option>
-        </select><br>
+        <h2 class="text-2xl font-bold text-pink-400 text-center mb-6">
+            Registration Form
+        </h2>
 
-        <label>Event Date</label><br>
-        <input type="date"><br>
+        <form>
 
-        <label>Gender</label><br>
-        <input type="radio" name="gender">Male
-        <input type="radio" name="gender">Female
-        <br>
+        <!-- NAME + CLASS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-        <label>Favorite Activities</label><br>
-        <input type="checkbox">Sports
-        <input type="checkbox">Art
-        <input type="checkbox">Technology
-        <input type="checkbox">Music
-        <br>
+        <!-- FULL NAME -->
+        <div>
+        <label for="name" class="block font-semibold mb-2">
+            Full Name
+        </label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+        </div>
 
-        <label>Reason for Joining</label><br>
-        <textarea rows="5" cols="40">
-        </textarea> <br>
 
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+        <!-- CLASS -->
+        <div>
+        <label for="class" class="block font-semibold mb-2">
+            Class
+        </label>
+        <select id="class" name="class"
+         class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <option value="">Choose your class</option>
+        <option>X-1</option>
+        <option>X-2</option>
+        <option>X-3</option>
+        <option>X-4</option>
+        <option>X-5</option>
+        <option>X-6</option>
+        <option>X-7</option>
+         <option>X-8</option>
+        </select>
+        </div>
+
+        </div>
+
+
+        <!-- EMAIL + PHONE -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+
+        <!-- EMAIL -->
+        <div>
+        <label for="email" class="block font-semibold mb-2">
+            Email
+        </label>
+        <input type="email" id="email" name="email" placeholder="example@email.com"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+        </div>
+
+
+        <!-- PHONE -->
+        <div>
+        <label for="phone" class="block font-semibold mb-2">
+            Phone Number
+        </label>
+        <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+        </div>
+
+        </div>
+
+
+        <!-- ACTIVITY -->
+        <div class="mt-5">
+        <label for="activity" class="block font-semibold mb-2">
+            Choose Activity
+        </label>
+        <select id="activity" name="activity"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <option value="">Choose an activity</option>
+        <option>Sports Competition</option>
+        <option>Art Competition</option>
+        <option>Storytelling</option>
+        <option>Music Performance</option>
+        <option>Science Exhibition</option>
+        </select>
+        </div>
+
+
+        <!-- GENDER -->
+        <fieldset class="mt-5">
+        <legend class="font-semibold mb-2">
+            Gender
+        </legend>
+        <div class="flex flex-wrap gap-5">
+            <label class="flex items-center gap-2">
+            <input type="radio" name="gender" value="male" class="accent-pink-500">Male</label>
+
+            <label class="flex items-center gap-2">
+            <input type="radio" name="gender" value="female" class="accent-pink-500">Female</label>
+        </div>
+        </fieldset>
+
+
+        <!-- FAVORITE ACTIVITIES -->
+        <fieldset class="mt-5">
+
+        <legend class="font-semibold mb-2">
+            Favorite Activities
+        </legend>
+        
+        <div class="flex flex-wrap gap-4">
+            <label class="flex items-center gap-2">
+            <input type="checkbox" name="favorite" value="sports" class="accent-pink-500">Sports</label>
+
+            <label class="flex items-center gap-2">
+            <input type="checkbox" name="favorite" value="art" class="accent-pink-500">Art</label>
+
+            <label class="flex items-center gap-2">
+            <input type="checkbox" name="favorite" value="music" class="accent-pink-500">Music</label>
+
+            <label class="flex items-center gap-2">
+            <input type="checkbox" name="favorite" value="science" class="accent-pink-500">Science
+            </label>
+        </div>
+        </fieldset>
+
+
+        <!-- EVENT DATE -->
+        <div class="mt-5">
+
+        <label for="date" class="block font-semibold mb-2">Event Date</label>
+        <input type="date" id="date" name="date"
+        class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+
+        </div>
+
+
+        <!-- REASON -->
+        <div class="mt-5">
+
+        <label for="reason" class="block font-semibold mb-2">
+            Why do you want to join?
+        </label>
+        <textarea
+            id="reason" name="reason" rows="4" placeholder="Write your reason here..."
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+        </textarea>
+        
+        </div>
+
+
+        <!-- AGREEMENT -->
+        <div class="mt-5">
+
+        <label class="flex items-start gap-3">
+        <input type="checkbox" name="agreement" class="mt-1 accent-pink-500">
+        <span>
+            I agree to participate in the school event.
+        </span>
+
+        </label>
+        </div>
+
+
+        <!-- BUTTON -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-7">
+
+        <button type="submit"
+        class="px-6 py-3 bg-pink-500 text-white font-semibold rounded-lg hover:bg-pink-600">Register
+        </button>
+
+        <button type="reset"
+        class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300">Reset
+        </button>
+        </div>
+
+        </form>
+
+        </section>
+
+
     </form>
+    
+    <!-- EVENT SCHEDULE -->
+    <section class="mt-10">
+
+    <h2 class="text-2xl font-bold text-pink-500 text-center mb-5">Event Schedule</h2>
+    <div class="overflow-x-auto bg-white rounded-2xl border shadow">
+    <table class="w-full min-w-650px text-left">
+
+    <!-- TABLE HEADER -->
+    <thead class="bg-pink-500 text-white">
+    <tr>
+        <th class="px-4 py-3">Activity</th>
+        <th class="px-4 py-3">Date</th>
+        <th class="px-4 py-3">Time</th>
+        <th class="px-4 py-3">Location</th>
+    </tr>
+    </thead>
+
+
+    <!-- TABLE BODY -->
+    <tbody>
+
+    <tr class="border-t hover:bg-pink-50">
+        <td class="px-4 py-3">Sports Competition</td>
+        <td class="px-4 py-3">10 March 2026</td>
+        <td class="px-4 py-3">08:00 AM</td>
+        <td class="px-4 py-3">School Field</td>
+    </tr>
+    <tr class="border-t hover:bg-pink-50">
+        <td class="px-4 py-3">Art Competition</td>
+        <td class="px-4 py-3">11 March 2026</td>
+        <td class="px-4 py-3">09:00 AM</td>
+        <td class="px-4 py-3">Art Room</td>
+    </tr>
+    <tr class="border-t hover:bg-pink-50">
+        <td class="px-4 py-3">Storytelling</td>
+        <td class="px-4 py-3">12 March 2026</td>
+        <td class="px-4 py-3">10:00 AM</td>
+        <td class="px-4 py-3">Auditorium</td>
+    </tr>
+    <tr class="border-t hover:bg-pink-50">
+        <td class="px-4 py-3">Science Exhibition</td>
+        <td class="px-4 py-3">13 March 2026</td>
+        <td class="px-4 py-3">08:30 AM</td>
+        <td class="px-4 py-3">Science Lab</td>
+    </tr>
+
+    </tbody>
+    </table>
+    </div>
+    </section>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 mt-8 text-gray-400">
+
+        <p>
+            © 2026 School Event Registration
+        </p>
+
+    </footer>
 
     
 </body>
